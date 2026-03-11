@@ -73,7 +73,7 @@ void getAddressComponents(uint64_t addr, int blockBits, int setBits, uint64_t *t
     *tag = addr >> (blockBits + setBits);
 }
 
-// --- LRU Replacement ---
+// LRU Replacement
 char accessLRU(Cache *cache, uint64_t addr, int time, int blockBits, int setBits) {
     uint64_t tag;
     int setIndex;
@@ -113,7 +113,7 @@ char accessLRU(Cache *cache, uint64_t addr, int time, int blockBits, int setBits
     return 'M';
 }
 
-// --- FIFO Replacement ---
+// FIFO Replacement
 char accessFIFO(Cache *cache, uint64_t addr, int time, int blockBits, int setBits) {
     uint64_t tag;
     int setIndex;
