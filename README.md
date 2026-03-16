@@ -1,6 +1,6 @@
 System Programming - Cache Lab
 
-Overview
+Overview:
 This project implements a cache simulator in C that models how a CPU cache behaves when accessing memory addresses. The simulator reads a sequence of memory addresses from an input file and determines whether each access results in a cache hit or miss.
 The program supports three common cache replacement policies:
 1. LRU (Least Recently Used) – Replaces the cache line that has not been used for the longest time.
