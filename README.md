@@ -37,15 +37,6 @@ This project implements a cache simulator that reads a trace of hexadecimal memo
 | **FIFO** | `fifo` | Evicts the line in the set with the oldest insertion timestamp, regardless of recent use. |
 | **Optimal** | `optimal` | Looks ahead through the remaining trace and evicts the line whose tag is reused furthest in the future (or never reused at all). Used as a theoretical best-case benchmark — it requires full knowledge of future accesses, which a real cache doesn't have. |
 
-## Build
-
-Requires `cachelab.h` (defines the `HIT_TIME` and `MISS_PENALTY` constants used in the cycle estimate) in the same directory.
-
-```bash
-gcc -Wall -o cache_project cache_project.c
-```
-
-> **Note:** `main()` contains a nested function definition (`printResult`), which is a GNU C extension. This compiles fine with GCC's default settings, but will fail under strict-standard flags like `-std=c11 -pedantic`, and won't compile with non-GNU compilers (e.g. MSVC). See [Known Limitations](#known-limitations).
 
 ## Usage
 
